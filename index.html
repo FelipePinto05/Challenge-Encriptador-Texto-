@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Encriptador de Texto - Desafío ONE</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-mobile.css">
+
+        <!--Tipografía Inter-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+        <!--Static Icon Font-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,300,1,0" />
+    </head>
+
+    <body>
+        <header>
+            <h1 class="logo-alura">
+                <img src="images/logo-alura.png" alt="Logotipo de Alura">
+            </h1>
+        </header>
+
+        <main>
+            <form class="bloque-izq">  
+                <textarea class="texto-entrada" cols="20" rows="3" placeholder="Ingrese el texto aquí" onkeypress="return validarEntrada(event)" required></textarea>
+
+                <fieldset class="indicacion">
+                    <img src="images/icono-exclamacion.png" alt="Icono de Exclamación">
+                    <p class="texto-indicacion">Solo letras minúsculas. No se aceptan acentos, caracteres especiales y números.</p>
+                </fieldset>
+
+                <fieldset class="botones">
+                    <input class="btn-encriptar" type="button" type="submit" value="Encriptar" onclick="resultadoEncriptacion()">
+                    <input class="btn-desencriptar" type="button" type="submit" value="Desencriptar" onclick="resultadoDesencriptacion()">
+                </fieldset>                 
+            </form>
+
+            <div class="bloque-der">
+                <div class="instruccion-mensaje">
+                    <img src="images/naruto_kakashi0127 (1).jpg" alt="Ilustración de persona con dudas">
+
+                    <div class="textos">
+                        <h2>Ningún mensaje fue encontrado</h2>
+                        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+                </div>
+
+                <form class="resultado-mensaje">
+                    <textarea class="texto-salida" cols="15" rows="8" readonly></textarea>
+                    <input class="btn-copiar" type="button" value="Copiar" onclick="copiarTexto()">
+                </form> 
+            </div>
+        </main>
+        <script src="js/encriptador.js"></script>
+    </body>
+
+</html>

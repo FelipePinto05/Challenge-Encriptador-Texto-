@@ -1,0 +1,202 @@
+/* Estilos Globales */
+body {
+    background: #57574d url("../images/Fondo_Naruto.png") no-repeat center;
+    background-size: cover;
+    
+    /*Tipografía Inter Global*/
+    font-family: 'Inter';
+    font-style: normal;
+    line-height: 150%;
+    font-weight: 400;  
+}
+
+img {
+    width: fit-content;
+    height: auto;
+}
+
+/*Botones Global*/
+input {
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    font-family: 'Inter';
+    font-size: 1rem;
+    line-height: 150%;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 120%;
+    font-weight: 700;
+    color: #023059;
+}
+
+/* Cabecera */
+header, main {
+    padding: 0 3%;
+}
+
+.logo-alura {
+    position: absolute;
+}
+
+/* Cuerpo */
+main {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    gap: 6%;
+    margin: 2rem 0;
+}
+
+/* Bloque Izquierdo: Encriptador */
+.bloque-izq {
+    flex: 1 50%;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 12rem;
+    margin-bottom: 2rem;
+    padding-left: 10%;
+}
+
+.bloque-izq textarea {
+    flex: 1 100%;
+    background-color: #f2dac3;
+    font-family: 'Inter';
+    font-size: 2rem;
+    line-height: 150%;
+    color: #391b47;
+    border: 0;
+    border-radius: 2rem;
+    resize: unset;
+    padding: 2rem 5%;
+    height: 177px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.3);
+}
+
+.bloque-izq textarea::placeholder {
+    opacity: 1;
+    color: #391b47;
+}
+
+.indicacion {
+    flex: 1 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.indicacion p {
+    display: inline-block;
+    color: white;
+    font-size: 0.75rem;
+}
+
+.botones {
+    flex: 1 100%;
+    display: flex;
+    flex-flow: row;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.botones input {
+    flex: 1 50%;
+}
+
+.btn-encriptar {
+    background-color: #0f2b44;
+    border: 0;
+    color: white;
+}
+
+.btn-desencriptar, .btn-copiar {
+    background-color: #bacad9;
+    border: 1.5px solid #092946;
+    color: #0f2b44;
+}
+
+/* Bloque Derecho: Instrucción y Mensaje */
+.bloque-der {
+    flex: 1 34%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2dac3;
+    border-radius: 2rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.3);
+}
+
+/* Instrucción */
+.instruccion-mensaje {
+    flex: 1 100%;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 7.5%;
+}
+
+.instruccion-mensaje img {
+    width: max-content;
+}
+
+.textos {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.textos p {
+    margin-top: 1rem;
+    color: #4e3e55;
+}
+
+/* Mensaje de Resultado */
+.resultado-mensaje {
+    flex: 1 100%;
+    display: none;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 7.5%;
+}
+
+.resultado-mensaje textarea {
+    flex: 1 100%;
+    background-color: unset;
+    font-family: 'Inter';
+    font-size: 1.5rem;
+    line-height: 150%;
+    color: #4e3e55;
+    border: 0;
+    resize: unset;
+    height: 328px;
+}
+
+.btn-copiar {
+    flex: 1 100%;
+    margin-top: 2rem;
+}
+
+/* Botones Hover y Active */
+.btn-encriptar:hover {
+    background-color: #375200;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.btn-desencriptar:hover, .btn-copiar:hover {
+    border: 0;
+    background-color: #375200;
+    color: white;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.btn-encriptar:active, .btn-desencriptar:active, .btn-copiar:active {
+    transform: scale(0.9);
+}
+
